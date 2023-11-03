@@ -20,4 +20,4 @@ EXPOSE 8080
 # Saat container diluncurkan, jalankan server dengan perintah npm start
 CMD ["npm", "start"]
 
-#token_github_GHCR: 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
+#token_github_GHCR: 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
