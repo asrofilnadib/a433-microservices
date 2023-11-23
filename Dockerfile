@@ -20,7 +20,7 @@ RUN npm ci
 COPY . .
 
 # Expose port 3000 pada container
-EXPOSE 3000
+EXPOSE 3001
 
 # Perintah yang akan dijalankan saat container dijalankan
 CMD ["npm", "start"]
