@@ -1,0 +1,7 @@
+Shipping service:
+Link: https://github.com/asrofilnadib/a433-microservices/pkgs/container/shipping-service
+Image: docker pull ghcr.io/asrofilnadib/shipping-service:latest
+
+Order service:
+Link: github.com/asrofilnadib/a433-microservices/pkgs/container/order-service
+Image: docker pull ghcr.io/asrofilnadib/order-service:latest

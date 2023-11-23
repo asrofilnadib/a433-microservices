@@ -1,3 +1,4 @@
+# ServiceAccount untuk layanan order
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -6,6 +7,7 @@ metadata:
   labels:
     app: order-service
 ---
+# Deployment untuk layanan order
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -38,4 +40,23 @@ spec:
             - containerPort: 3000
           env:
             - name: PORT
-
+              value: "3000"
+            - name: AMQP_URL
+              value: "amqp://user:TBV9WE00vf@rabbitmq.final-project:5672"
+---
+# Service untuk layanan order
+apiVersion: v1
+kind: Service
+metadata:
+  name: order-service
+  namespace: final-project
+  labels:
+    app: order-service
+    service: order-service
+spec:
+  selector:
+    app: order-service
+  ports:
+    - port: 3000
+      name: http
+  type: NodePort
