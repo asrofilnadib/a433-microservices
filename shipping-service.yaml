@@ -31,7 +31,7 @@ spec:
       serviceAccountName: shipping-service
       containers:
         - name: shipping-service
-          image: ghcr.io/f1dz/shipping-service
+          image: ghcr.io/asrofilnadib/shipping-service:latest
           resources:
             limits:
               memory: "1Gi"

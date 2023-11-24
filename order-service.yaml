@@ -5,7 +5,7 @@ metadata:
   name: order-service
   namespace: final-project
   labels:
-    app: order-service
+    account: order-service
 ---
 # Deployment untuk layanan order
 apiVersion: apps/v1
@@ -31,7 +31,7 @@ spec:
       serviceAccountName: order-service
       containers:
         - name: order-service
-          image: ghcr.io/asrofilnadib/order-service
+          image: ghcr.io/asrofilnadib/order-service:latest
           resources:
             limits:
               memory: "1Gi"
